@@ -2,7 +2,7 @@
 
 ## This script installs npm packages for development
 
-for pkg in eslint jshint @angular/cli angular-cli-ghpages bootstrap electron ember-cli express ejs jquery electron-markdownify nodemon typescript popper.js
+for pkg in eslint body-parser jshint @angular/cli angular-cli-ghpages bootstrap electron ember-cli express ejs jquery electron-markdownify nodemon typescript popper.js
 do
   echo $'\n'$"Installing $pkg package..."
   npm install -g $pkg
