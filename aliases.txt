@@ -32,7 +32,7 @@ alias gs='git status'
 alias ga='git add '
 alias gb='git branch'
 alias gc='git commit -m'
-alias gl='git log --oneline'
+alias gl='git log --oneline --graph --decorate --all'
 alias gp='git push origin master'
 alias tsc="tsc -t "\'"es2015"\'""
 
@@ -42,6 +42,7 @@ alias tsc="tsc -t "\'"es2015"\'""
 ## youtube downloader video and mp3
 alias ytd="youtube-dl -o '%"\("title"\)"s.%"\("ext"\)"s'"
 alias mp3='youtube-dl --extract-audio --audio-format mp3'
+alias webtech='webtech -u'
 
 ## get the files downloaded in the tor directory
 alias take='mv ~/.local/share/torbrowser/tbb/x86_64/tor-browser_en-US/Browser/Downloads/* ~/Downloads/TOS/ && caja ~/Downloads/TOS/' 
