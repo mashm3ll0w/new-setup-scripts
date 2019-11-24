@@ -4,13 +4,13 @@
 cat << _EOF_
                               Install some packages from the parrot repository.
                                         We'll install the following: 
-                neofetch, steghide, putty & silversearcher-ag, youtube-dl, apt-transport-https
+                neofetch, steghide, putty & silversearcher-ag, youtube-dl, apt-transport-https cmus tree
 _EOF_
 sleep 5
 
 ## create a for loop that loops through a given list of packages
 ## NOTE: skip putty-tools because it is a dependency of putty
-for pkg in tilix neofetch steghide putty silversearcher-ag youtube-dl tree
+for pkg in tilix neofetch steghide putty silversearcher-ag youtube-dl tree cmus
 do
   ## checks if the package is installed
   echo $'\n'$"Checking if $pkg is installed..."
