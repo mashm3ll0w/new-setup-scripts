@@ -25,7 +25,8 @@ alias cp='cp -rv'
 alias rm='rm -rf'
 alias mkdir='mkdir -pv'
 alias ..='cd ..'
-
+alias df='df -h'
+alias du='du -sh'
 
 ## Git aliases and other Development aliases
 alias gs='git status'
@@ -51,6 +52,11 @@ alias take='mv ~/.local/share/torbrowser/tbb/x86_64/tor-browser_en-US/Browser/Do
 ## Other aliases that are yet to be configured
 #alias please='sudo'
 #alias -='cd -'
+
+## Enum
+alias ship='sudo ~/.my-git-apps/ship/ship'
+alias fluxion='cd ~/.my-git-apps/fluxion/ && sudo ./fluxion.sh'
+alias cupp='python3 ~/.my-git-apps/cupp/cupp.py'
 
 
 
