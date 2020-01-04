@@ -8,7 +8,9 @@ _EOF_
 sleep 3
 
 install() {
-echo $'\n'$"Adding the stable channel to our sources..."
+echo $'\n'$"Adding the Google Repo to our sources..."
+sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+echo $'\n'$"Fetching the repository key..."
 wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sleep 1
 echo $'\n'$"Successfully added..."
@@ -21,33 +23,19 @@ sleep 1
 echo $'\n'$"Success..."
 sleep 2
 
-echo $'\n'$"Downloading the deb package file..."
-pushd /tmp/
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-echo ""
-sleep 2
-echo $'\n'$"Installing..."
-sudo dpkg -i google-chrome-stable_current_amd64.deb
-echo ""
-echo $'\n'$"Successfully installed..."
-sleep 1
-echo $'\n'$"Adding Chrome to the sandbox profile..."
-sudo firecfg
-echo ""
-echo $'\n'$"Cleaning up and exiting..."
-rm google-chrome-stable_current_amd64.deb
-popd
+echo $'\n'$"Installing Chrome..."
+sudo apt install google-chrome-stable
 exit
 }
 
 remove(){
-  echo $'\n'$"Removing balenaEtcher... "
-  sudo apt remove balena-etcher-electron
-  echo $'\n'$"Successfully removed balenaEtcher... "
+  echo $'\n'$"Removing Chrome... "
+  sudo apt remove google-chrome-stable
+  echo $'\n'$"Successfully removed Chrome... "
   sleep 2
 
   echo $'\n'$"Removing the sources list..."
-  sudo rm /etc/apt/sources.list.d/balena-etcher.list
+  sudo rm /etc/apt/sources.list.d/google-chrome.list
   sleep 1
   echo $'\n'$"Successfully removed... "
   sleep 1
