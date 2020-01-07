@@ -31,7 +31,7 @@ sudo update-grub
 ###################################### 3840 x 2160 #########################################
 ## 3. Change the boot screen
 ## Rename old wallpaper
-sudo mv /etc/share/plymouth/themes/parrot/background.png /etc/share/plymouth/themes/parrot/old.background.png.old 
+sudo mv /usr/share/plymouth/themes/parrot/background.png /usr/share/plymouth/themes/parrot/old.background.png.old 
 
 ## Copy the new image...
 cp ./imgs/background.png /usr/share/plymouth/themes/parrot/
