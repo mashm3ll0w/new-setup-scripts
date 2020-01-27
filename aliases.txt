@@ -5,6 +5,7 @@ alias poweroff='systemctl poweroff'
 #alias mash='caja /mnt/my-storage/'
 alias baby='sudo'
 alias lok='mate-screensaver-command -l'
+alias nvme="sudo nvme smart-log /dev/nvme0n1 | ag '^temperature'"
 
 ####################################################################################################
 ## Note to self:
