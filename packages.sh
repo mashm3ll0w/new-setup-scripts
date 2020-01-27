@@ -10,7 +10,7 @@ sleep 5
 
 ## create a for loop that loops through a given list of packages
 ## NOTE: skip putty-tools because it is a dependency of putty
-for pkg in tilix neofetch steghide putty silversearcher-ag youtube-dl tree cmus
+for pkg in tilix neofetch steghide putty silversearcher-ag youtube-dl tree cmus nvme-cli
 do
   ## checks if the package is installed
   echo $'\n'$"Checking if $pkg is installed..."
